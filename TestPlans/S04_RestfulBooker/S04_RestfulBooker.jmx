@@ -175,7 +175,7 @@
           </ResponseAssertion>
           <hashTree/>
           <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config">
-            <stringProp name="filename">D:/nameDetails.csv</stringProp>
+            <stringProp name="filename">nameDetails.csv</stringProp>
             <stringProp name="fileEncoding">UTF-8</stringProp>
             <stringProp name="variableNames">first,last</stringProp>
             <boolProp name="ignoreFirstLine">true</boolProp>
@@ -243,7 +243,7 @@
           </UniformRandomTimer>
           <hashTree/>
           <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config">
-            <stringProp name="filename">D:/dateDetails.csv</stringProp>
+            <stringProp name="filename">dateDetails.csv</stringProp>
             <stringProp name="fileEncoding">UTF-8</stringProp>
             <stringProp name="variableNames">checkin,checkout</stringProp>
             <boolProp name="ignoreFirstLine">true</boolProp>
