@@ -1,0 +1,36 @@
+on: [push]
+jobs:
+  jmeter_job:
+    runs-on: ubuntu-latest
+    name: JMeter Test Execution-2
+    steps:      
+    - name: Checkout-2
+      uses: actions/checkout@v3
+
+    - name: Create reports directory
+      run: mkdir reports
+      
+    - name: Run JMeter Tests-2
+      uses: ./
+      with:
+        test-plan-path: ./TestPlans/S01_SimpleExample/S01_SimpleExample.jmx
+        args: "-e -o ./reports/html/"
+        
+    - name: Upload Results-2
+      uses: actions/upload-artifact@v4
+      with:
+        name: jmeter-results-2
+        path: result.jtl
+        if-no-files-found: error
+
+    - name: Upload HTML Reports-2
+      uses: actions/upload-artifact@v4
+      with:
+        name: jmeter-reports-2
+        path: reports
+        if-no-files-found: error
+
+
+
+
+
